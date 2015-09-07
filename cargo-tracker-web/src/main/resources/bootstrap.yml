@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: Cargotracker-UI
+  cloud:
+    config:
+      uri: http://70.50.8.125:8889
+  profiles:
+    active: development

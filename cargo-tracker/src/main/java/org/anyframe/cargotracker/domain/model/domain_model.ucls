@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="net.java.cargotracker.domain.model.location.UnLocode" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/location/UnLocode.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="622" y="752"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="net.java.cargotracker.domain.model.location.Location" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/location/Location.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="623" y="664"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="3" language="java" name="net.java.cargotracker.domain.model.location.LocationRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/location/LocationRepository.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="131" y="26"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="net.java.cargotracker.domain.model.voyage.CarrierMovement" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/voyage/CarrierMovement.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="390" y="577"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="net.java.cargotracker.domain.model.voyage.VoyageNumber" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/voyage/VoyageNumber.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="390" y="470"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="net.java.cargotracker.domain.model.voyage.Schedule" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/voyage/Schedule.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="620" y="469"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="net.java.cargotracker.domain.model.voyage.Voyage.Builder" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/voyage/Voyage.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="258" y="382"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="8" language="java" name="net.java.cargotracker.domain.model.voyage.VoyageRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/voyage/VoyageRepository.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="129" y="103"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="9" language="java" name="net.java.cargotracker.domain.model.cargo.Cargo" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/Cargo.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="885" y="44"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="10" language="java" name="net.java.cargotracker.domain.model.cargo.CargoRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/CargoRepository.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="126" y="181"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="11" language="java" name="net.java.cargotracker.domain.model.cargo.Delivery" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/Delivery.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="599" y="152"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="net.java.cargotracker.domain.model.cargo.RouteSpecification" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/RouteSpecification.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1006" y="152"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="net.java.cargotracker.domain.model.cargo.Itinerary" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/Itinerary.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="805" y="153"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="net.java.cargotracker.domain.model.cargo.Leg" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/Leg.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="805" y="266"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="net.java.cargotracker.domain.model.cargo.TrackingId" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/TrackingId.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1206" y="152"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="16" language="java" name="net.java.cargotracker.domain.model.cargo.RoutingStatus" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/RoutingStatus.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="347" y="64"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </enumeration>  
+  <enumeration id="17" language="java" name="net.java.cargotracker.domain.model.cargo.TransportStatus" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/TransportStatus.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="343" y="152"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="18" language="java" name="net.java.cargotracker.domain.model.cargo.HandlingActivity" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/HandlingActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="513" y="268"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="net.java.cargotracker.domain.model.voyage.Voyage" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/voyage/Voyage.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="620" y="383"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="20" language="java" name="net.java.cargotracker.domain.model.handling.HandlingEventRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/handling/HandlingEventRepository.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="131" y="252"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="false" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </interface>  
+  <association id="21">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="22" name="itinerary"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="24">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="25" name="carrierMovements"/>      
+      <multiplicity id="26" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="27">    
+    <bendpoint x="412" y="649"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="28" name="arrivalLocation"/>      
+      <multiplicity id="29" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="30">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="31" name="trackingId"/>      
+      <multiplicity id="32" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="33">    
+    <bendpoint x="940" y="766"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="34" name="destination"/>      
+      <multiplicity id="35" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="36">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="37" name="voyageNumber"/>      
+      <multiplicity id="38" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="39">    
+    <bendpoint x="774" y="364"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="40" name="voyage"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="42">    
+    <bendpoint x="930" y="743"/>    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="43" name="origin"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="45">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="46" name="transportStatus"/>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="17" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="48">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="49" name="routingStatus"/>      
+      <multiplicity id="50" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="51">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="52" name="currentVoyage"/>      
+      <multiplicity id="53" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="54">    
+    <bendpoint x="370" y="710"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="55" name="departureLocation"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="57">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="58" name="routeSpecification"/>      
+      <multiplicity id="59" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="60">    
+    <bendpoint x="633" y="256"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="61" name="NO_ACTIVITY"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="63">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="64" name="departureLocation"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="66">    
+    <bendpoint x="848" y="611"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="67" name="loadLocation"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="69">    
+    <bendpoint x="453" y="364"/>    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="70" name="voyage"/>      
+      <multiplicity id="71" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="19" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="72">    
+    <bendpoint x="188" y="471"/>    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="73" name="voyageNumber"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <nesting id="75">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="7"/>  
+  </nesting>  
+  <association id="76">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="77" name="schedule"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="79">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="80" name="unLocode"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="82">    
+    <bendpoint x="901" y="684"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="83" name="origin"/>      
+      <multiplicity id="84" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="85">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="86" name="nextExpectedActivity"/>      
+      <multiplicity id="87" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="88">    
+    <bendpoint x="599" y="45"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="89" name="delivery"/>      
+      <multiplicity id="90" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="91">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="92" name="legs"/>      
+      <multiplicity id="93" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="94">    
+    <bendpoint x="779" y="584"/>    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="95" name="lastKnownLocation"/>      
+      <multiplicity id="96" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="97">    
+    <bendpoint x="170" y="578"/>    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="98" name="carrierMovements"/>      
+      <multiplicity id="99" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="100">    
+    <bendpoint x="872" y="642"/>    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="101" name="unloadLocation"/>      
+      <multiplicity id="102" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="103">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="104" name="location"/>      
+      <multiplicity id="105" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

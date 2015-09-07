@@ -1,0 +1,77 @@
+<div id="container" class="panel">
+	<span class="success label">Details</span>
+	<table id="tblCargoDetail">
+		<tbody>
+			<tr>
+				<td>Booking ID</td>
+				<td>{{bookingId}}</td>
+			</tr>
+			<tr>
+				<td>Origin</td>
+				<td>{{origin}}</td>
+			</tr>
+			<tr>
+				<td>Destination</td>
+				<td>{{finalDestination}}</td>
+			</tr>
+			{{#unless legs}}
+			<tr>
+				<td></td>
+				<td><a href="#detail/{{bookingId}}/change-destination">Change destination</a></td>
+			</tr>
+			{{/unless}}
+			<tr>
+				<td>Arrival deadline</td>
+				<td>{{arrivalDeadline}}</td>
+			</tr>
+			<tr>
+				<td>Booking Status</td>
+				<td>{{bookingStatus}}</td>
+			</tr>
+			{{#if trackingId}}
+			<tr>
+				<td>Tracking ID</td>
+				<td><a href="#track/{{trackingId}}">{{trackingId}}</a></td>
+			</tr>
+			{{/if}}
+		</tbody>
+	</table>
+	<p></p>
+	
+	<span class="success label">Itinerary</span>
+	{{#if legs}}
+	<div id="divRouted">
+		{{#if misrouted}}
+		<div id="divMisrouted">
+			<p><em>Cargo is misrouted</em></p>
+		</div>
+		{{/if}}
+		<table>
+			<thead>
+				<tr>
+					<th>Voyage number</th>
+					<th>Load Location</th>
+					<th class="show-for-medium-up">Time</th>
+					<th>Unload Location</th>
+					<th class="show-for-medium-up">Time</th>
+				</tr>
+			</thead>
+			<tbody>
+			    {{#each legs}}
+			    <tr>
+			        <td>{{voyageNumber}}</td>
+			        <td>{{from}}</td>
+			        <td>{{loadTime}}</td>
+			        <td>{{to}}</td>
+			        <td>{{unloadTime}}</td>
+			    </tr>
+			    {{/each}}
+			</tbody>
+		</table>
+	</div>
+	{{else}}
+	<div id="divNotRouted">
+		<p><strong>Not routed</strong></p>
+	</div>
+	{{/if}}
+</div>

@@ -1,0 +1,17 @@
+server:
+  port: 30001
+  
+spring:
+  datasource:
+    url: jdbc:postgresql://70.121.244.13:5432/anyframecloud
+    username: anyframecloud
+    password: anyframe00
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true

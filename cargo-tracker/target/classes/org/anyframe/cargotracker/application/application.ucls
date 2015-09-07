@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="net.java.cargotracker.application.internal.DefaultHandlingEventService" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/internal/DefaultHandlingEventService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="695" y="342"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="net.java.cargotracker.application.internal.DefaultBookingService" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/internal/DefaultBookingService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1128" y="368"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="net.java.cargotracker.application.internal.DefaultCargoInspectionService" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/internal/DefaultCargoInspectionService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="906" y="343"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="4" language="java" name="net.java.cargotracker.application.ApplicationEvents" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/ApplicationEvents.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="466" y="82"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="5" language="java" name="net.java.cargotracker.application.HandlingEventService" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/HandlingEventService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="696" y="55"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="6" language="java" name="net.java.cargotracker.application.BookingService" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/BookingService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1129" y="82"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="7" language="java" name="net.java.cargotracker.application.CargoInspectionService" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/CargoInspectionService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="902" y="54"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="8" language="java" name="net.java.cargotracker.application.util.SampleDataGenerator" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/util/SampleDataGenerator.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="185" y="127"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="net.java.cargotracker.application.util.JsonMoxyConfigurationContextResolver" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/util/JsonMoxyConfigurationContextResolver.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="178" y="305"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="net.java.cargotracker.application.util.RestConfiguration" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/util/RestConfiguration.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="132" y="402"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="net.java.cargotracker.application.util.DateUtil" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/application/util/DateUtil.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="130" y="510"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="false" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="false"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <realization id="12">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="7"/>  
+  </realization>  
+  <realization id="13">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="6"/>  
+  </realization>  
+  <realization id="14">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="false" package="false" protected="true" private="true" static="false"/>    
+    <operations public="false" package="false" protected="false" private="false" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

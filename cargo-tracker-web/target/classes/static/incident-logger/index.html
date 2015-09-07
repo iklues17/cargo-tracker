@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Incident Logger</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="../webjars/foundation/5.5.2/css/foundation.css"  rel="stylesheet"/>
+<link href="../css/cargotracker.css"  rel="stylesheet"/>
+<link href="../css/cargo-custom.css"  rel="stylesheet"/>
+</head>
+<body>
+	<!-- Cargo Tracker Navigation Menu -->
+		<div class="off-canvas-wrap" data-offcanvas>
+			<div class="inner-wrap">
+				<!-- Navigation -->
+				<nav class="tab-bar">
+					<section class="left tab-bar-section">
+						<h1><a href="/">
+							<span class="title">Cargo Tracker 
+								<label class="show-for-medium-up"> - Powered by Java EE 7</label>
+							</span>
+						</a></h1>
+					</section>
+					
+					<section class="right-small">
+						<a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+					</section>
+				</nav>
+	
+				<aside class="right-off-canvas-menu">
+					<ul class="off-canvas-list">
+						<li><label>Menu</label></li>
+						<li><a href="/">LOG</a></li>
+					</ul>
+				</aside>
+	
+				<section class="main-section">
+					<!-- Body Content -->
+					<div id="body" class="cargo-device-content">
+						<form id="incidentLogForm">
+							<div class="row">
+								<div class="large-12 columns">
+									<div id="container" class="panel">
+										<div class="row">
+											<div class="small-3">
+												<div class="row">
+													<div class="small-3 columns left">
+														<label for="Log" class="label">Log an Incident</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="small-12">
+												<div class="row">
+													<div class="small-5 columns">
+														<label for="input-completionTime" class="right inline"
+															id="label-completionTime">Completion Time</label>
+													</div>
+													<div class="small-7 left columns">
+														<input type="text" name="completionTime"
+															id="input-completionTime" placeholder="yyyy-MM-dd HH:mm"
+															required pattern=".{16,16}" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="small-12">
+												<div class="row">
+													<div class="small-5 columns">
+														<label for="input-trackingID" class="right inline"
+															id="label-trackingID">Tracking ID</label>
+													</div>
+													<div class="small-7 left columns">
+														<input type="text" name="trackingId" id="input-trackingID"
+															placeholder="Enter a tracking ID" required
+															pattern=".{4,10}" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="small-12">
+												<div class="row">
+													<div class="small-5 columns">
+														<label for="input-unLocCode" class="right inline"
+															id="label-unLocCode">Location Code</label>
+													</div>
+													<div class="small-7 left columns">
+														<input type="text" name="unLocode" id="input-unLocCode"
+															placeholder="Enter a Location Code" required
+															pattern=".{5,5}" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="small-12">
+												<div class="row">
+													<div class="small-5 columns">
+														<label for="input-voyageNumber" class="right inline"
+															id="label-voyageNumber">Voyage Number</label>
+													</div>
+													<div class="small-7 left columns">
+														<input type="text" name="voyageNumber"
+															id="input-voyageNumber"
+															placeholder="Enter a Voyage Number" pattern=".{5,5}" />
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="small-12">
+												<div class="row">
+													<div class="small-5 columns">
+														<label for="select-eventType" id="label-eventType"
+															class="right inline">Event Type</label>
+													</div>
+													<div class="small-7 left columns">
+														<select name="eventType" id="select-EventType">
+															<option value="LOAD">LOAD</option>
+															<option value="UNLOAD">UNLOAD</option>
+															<option value="RECEIVE">RECEIVE</option>
+															<option value="CLAIM">CLAIM</option>
+															<option value="CUSTOMS">CUSTOMS</option>
+														</select>
+	
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="small-12">
+												<div class="row">
+													<div class="small-7 columns right">
+														<input type="submit" value="Log"
+															class="round alert tiny button" />
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+				<a class="exit-off-canvas"></a>
+			</div>
+		</div>
+	<!-- End of Cargo Tracker Navigation Menu -->
+    
+	
+    <!-- Always have Foundation load JQuery and not Zepto -->
+	<script type="text/javascript" src="../webjars/jquery/2.1.4/jquery.js"></script>
+	<script type="text/javascript" src="../webjars/foundation/5.5.2/js/foundation.min.js"></script>
+	<script type="text/javascript" src="js/incidentLogger.js"></script>
+</body>
+</html>

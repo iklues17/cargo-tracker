@@ -1,0 +1,138 @@
+.label {
+	font-size: 1rem;
+}
+
+.button.secondary.active {
+	 background-color: #b9b9b9;
+}
+
+.button.warning.active {
+	 background-color: #cf6e0e;
+}
+
+.form-input-to-label {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  color: rgba(0, 0, 0, 0.75);
+  font-family: inherit;
+  font-size: 0.875rem;
+  padding: 0.5rem;
+  height: 2.3125rem;
+  margin: 0 0 1rem 0;
+  cursor: default;
+}
+
+label.panel-title {
+	margin-bottom: 1rem;
+}
+
+.row.entry-row {
+	margin : 0px;
+}
+
+td > input {
+	margin: 0px !important;
+}
+
+.button.inrow {
+	margin: 0px !important;
+}
+
+.cargo-box {
+	border-radius: 0.5rem;
+	margin-bottom: 1.25rem;
+	padding: 1.25rem;
+	background-color: ghostwhite;
+}
+
+.cargo-box.not-approval {
+	color: honeydew;
+	background-color: darkgray;
+}
+
+.cargo-box.not-shipping {
+	background-color: gold;
+}
+
+.cargo-box.misrouted {
+	color: honeydew;
+	background-color: orangered;
+}
+
+.cargo-box.shipping {
+	background-color: skyblue;
+}
+
+.cargo-box.completed {
+	color: honeydew;
+	background-color: #0080ff;
+}
+
+
+.top-bar .title-area {
+	padding-left: 10px;
+}
+
+.top-bar .title-area .name label{
+	color: #FFFFFF;	
+}
+
+.top-bar .title-area .name h2 {
+	background-color: rgb(107, 185, 19);
+}
+
+.top-bar .title-area .name.portal h2 {
+	background-color: #f04124;
+}
+
+.tab-bar .title{
+	color: #FFFFFF;	
+	background-color: #f04124;
+	padding: 12.5px 10px 12.5px 10px;	
+}
+
+.tab-bar .title label {
+	color: #FFFFFF;	
+}
+
+.reveal-modal {
+		margin-top: 50px;
+}
+	
+@media only screen and (max-width: 40em) {
+	.reveal-modal {
+		min-height: 50vh;
+	}
+}
+
+[aria-hidden="true"]{
+	display: none;
+}
+
+[aria-cargo-events-empty="false"]{
+	display: none;
+}
+
+[aria-cargo-misdirected="false"]{
+	display: none;
+}
+
+[aria-cargo-routed="false"]{
+	display: none;
+}
+
+[aria-cargo-not-routed="false"]{
+	display: none;
+}
+
+[aria-cargo-misrouted="false"]{
+	display: none;
+}
+
+[aria-route-candidates-empty="false"]{
+	display: none;
+}
+
+[aria-route-candidates="false"]{
+	display: none;
+}

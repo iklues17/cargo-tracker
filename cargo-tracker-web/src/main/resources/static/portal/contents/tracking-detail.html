@@ -1,0 +1,24 @@
+<div id="result">
+	<h2>Cargo {{trackingId}} is now: {{statusText}}</h2>
+	<p>Estimated time of arrival in {{destination}}: {{eta}}</p>
+	{{nextExpectedActivity}}
+	{{#if misdirected}}
+	<div>
+		<p class="notify">
+			<img src="/images/error.png" alt="" />Cargo is misdirected
+		</p>
+	</div>
+	{{else}}
+	<div>
+		<h3>Handling History</h3>
+		<ul id="ulHandlingEvents" style="list-style-type: none;">
+		{{#each handlingEventViewDto}}
+			<li><p>
+				<img style="vertical-align: top;" src="/images/{{#if expected}}tick{{else}}cross{{/if}}.png"/>
+				<span style="padding-left:5px;">{{description}}</span>
+			</p></li>
+		{{/each}}
+		</ul>
+	</div>
+	{{/if}}
+</div>

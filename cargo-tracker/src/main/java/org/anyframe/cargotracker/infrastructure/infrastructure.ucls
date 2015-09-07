@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <annotation id="1" language="java" name="net.java.cargotracker.infrastructure.events.cdi.CargoInspected" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/infrastructure/events/cdi/CargoInspected.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="117" y="71"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </annotation>  
+  <class id="2" language="java" 
+    name="net.java.cargotracker.infrastructure.messaging.jms.HandlingEventRegistrationAttemptConsumer" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/infrastructure/messaging/jms/HandlingEventRegistrationAttemptConsumer.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="153" y="179"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="net.java.cargotracker.infrastructure.messaging.jms.SimpleLoggingConsumer" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/infrastructure/messaging/jms/SimpleLoggingConsumer.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="413" y="180"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="net.java.cargotracker.infrastructure.messaging.jms.JmsApplicationEvents" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/infrastructure/messaging/jms/JmsApplicationEvents.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="751" y="262"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="net.java.cargotracker.infrastructure.messaging.jms.CargoHandledConsumer" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/infrastructure/messaging/jms/CargoHandledConsumer.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1105" y="190"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="net.java.cargotracker.infrastructure.persistence.jpa.JpaVoyageRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/infrastructure/persistence/jpa/JpaVoyageRepository.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="130" y="857"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="net.java.cargotracker.infrastructure.persistence.jpa.JpaHandlingEventRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/infrastructure/persistence/jpa/JpaHandlingEventRepository.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="893" y="813"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="net.java.cargotracker.infrastructure.persistence.jpa.JpaCargoRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/infrastructure/persistence/jpa/JpaCargoRepository.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="604" y="840"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="net.java.cargotracker.infrastructure.persistence.jpa.JpaLocationRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/infrastructure/persistence/jpa/JpaLocationRepository.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="367" y="867"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="10" language="java" name="net.java.cargotracker.domain.model.cargo.CargoRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/cargo/CargoRepository.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="601" y="636"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="11" language="java" name="net.java.cargotracker.domain.model.location.LocationRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/location/LocationRepository.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="360" y="713"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="12" language="java" name="net.java.cargotracker.domain.model.voyage.VoyageRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/voyage/VoyageRepository.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="134" y="705"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="13" language="java" name="net.java.cargotracker.domain.model.handling.HandlingEventRepository" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/model/handling/HandlingEventRepository.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="890" y="641"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="14" language="java" name="net.java.cargotracker.infrastructure.routing.ExternalRoutingService" 
+    project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/infrastructure/routing/ExternalRoutingService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="184" y="502"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="15" language="java" name="net.java.cargotracker.domain.service.RoutingService" project="cargo-tracker" 
+    file="/cargo-tracker/src/main/java/net/java/cargotracker/domain/service/RoutingService.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="183" y="311"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <realization id="16">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <realization id="17">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <realization id="18">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="12"/>  
+  </realization>  
+  <realization id="19">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="13"/>  
+  </realization>  
+  <association id="20">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="21" name="voyageRepository"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="23">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="15"/>  
+  </realization>  
+  <association id="24">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="25" name="locationRepository"/>      
+      <multiplicity id="26" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

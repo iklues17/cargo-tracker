@@ -1,0 +1,37 @@
+server:
+  port: 28001
+  
+spring:
+  datasource:
+    url: jdbc:postgresql://70.121.244.13:5432/anyframecloud
+    username: anyframecloud
+    password: anyframe00
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  rabbitmq:
+    //host: 70.50.8.125
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    
+amqp:
+  exchange:
+    name: topic_cargos
+  routingkey:
+    cargoHandled: cargo.cargoHandled
+    misdirected: cargo.misdirected
+    delivered: cargo.delivered
+    handlingEvent: cargo.handlingEvent
+  queue-name:
+    cargoHandled: cargoHandledQueue
+    misdirected: misdirectedCargoQueue
+    delivered: deliveredCargoQueue
+    handlingEvent: handlingEventQueue

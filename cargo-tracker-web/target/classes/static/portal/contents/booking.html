@@ -1,0 +1,35 @@
+<form id="frmNewBooking">
+	<div class="row">
+		<div class="small-12 columns">
+			<div id="container" class="panel">
+				<div class="row entry-row">
+					<div class="small-3">
+						<div class="row">
+							<div class="small-3 columns left">
+								<label for="Origin" class="label panel-title">Book New Cargo</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row entry-row">
+					<ul id="errorMsg" style="display: none; padding-left: 20px; color: red; list-style-type: none">
+					</ul>
+				</div>
+				{{#each entryForm}}
+				{{#entry-form-center}}{{/entry-form-center}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<ul class="button-group radius right">
+				<li><div role="button" id="btnBooking"
+					class="button small">
+					Book</div></li>
+				<li><div role="button" id="btnBack"
+					class="button small secondary">Home</div></li>
+			</ul>
+		</div>
+	</div>
+</form>

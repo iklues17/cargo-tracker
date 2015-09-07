@@ -1,0 +1,35 @@
+<form id='formSignUp'>
+	<div class="row">
+		<fieldset>
+			<legend>Create New Account</legend>
+			<label>Email Address 
+				<input name="emailAddress" type="email" placeholder="Inputs your email address...">
+			</label>
+			<label>Password 
+				<input name="password" type="password" placeholder="Inputs your password...">
+			</label>
+			<label>First Name 
+				<input name="firstName" type="text" placeholder="Inputs your Firstname...">
+			</label>
+			<label>Last Name
+				<input name="lastName" type="text" placeholder="Inputs your Lastname...">
+			</label>
+			<label>Your Company 
+				<select name="company"></select>
+			</label>
+			<label>Role 
+				<select name="role">
+					<option id="MEMBER">Member</option>
+					<option id="MANAGER">Cargo Manager</option>
+					<option id="ADMIN">Administrator</option>
+				</select>
+			</label>
+		</fieldset>
+	</div>
+	<div class="row">
+		<ul class="button-group radius right">
+			<li><div id="btnSignUp" role="button" class="button small" tabindex="0">Sign up</div></li>
+			<li><div id="btnBack" role="button" class="button small secondary">Cancel</div></li>
+		</ul>
+	</div>
+</form>

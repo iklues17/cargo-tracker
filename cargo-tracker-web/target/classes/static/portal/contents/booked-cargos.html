@@ -1,0 +1,25 @@
+<div class="panel">
+	<span class="label">Booked Cargos</span>
+	<table class="display" cellspacing="0" width="100%">
+	    <thead>
+	    <tr>
+	        {{#each tableheaders}}
+	        {{#table-head}}{{/table-head}}
+	        {{/each}}
+	    </tr>
+	    </thead>
+	    <tbody>
+	    {{#each tabledatas}}
+	    <tr id="{{bookingId}}">
+	        <td>{{bookingId}}</td>
+	        <td>{{origin}}</td>
+	        <td>{{destination}}</td>
+	        <td>{{arrivalDeadline}}</td>
+	        <td>{{commodity}}</td>
+	        <td>{{quantity}}</td>
+	        <td>{{bookingStatus}}</td>
+	    </tr>
+	    {{/each}}
+	    </tbody>
+	</table>
+</div>
