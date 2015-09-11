@@ -1,0 +1,20 @@
+{
+    "sampleAdminWebApp": {
+        "person" : {
+            "home": {
+                "title": "Persons",
+                "createLabel": "Create a new Person",
+                "createOrEditLabel": "Create or edit a Person"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Person {{ id }}?"
+            },
+            "detail": {
+                "title": "Person"
+            },
+            "first_name": "First_name",
+            "last_name": "Last_name",
+            "persontype": "persontype"
+        }
+    }
+}

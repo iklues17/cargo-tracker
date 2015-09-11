@@ -1,0 +1,34 @@
+<style>
+.paging-font {
+	font-size:16px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.active{
+	font-weight: bold;
+	font-size:18px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+</style>
+
+<div id="paging">
+	<div class="col-xs-2">
+	</div>
+	<div class="col-xs-8 paging-font" align="center">
+		<a ng-show="pages.first" ng-click="loadPage(pages.first)" class="fist paging-font"  href="#" title="처음">&lt;&lt;  </a> 
+		<a ng-show="pages.prev" ng-click="loadPage(pages.prev)" class="prev paging-font"  href="#" title="이전">&lt;  </a>
+		<a ng-show="pages.current > 2" ng-click="loadPage((1 * pages.current) - 2)"  href="#">{{(1 * pages.current) - 2}}  </a> 
+		<a ng-show="pages.current > 1" ng-click="loadPage((1 * pages.current) - 1)"  href="#">{{(1 * pages.current) - 1}}  </a> 
+		<a href="#" class="active">{{pages.current}}  </a>
+		<a ng-show="pages.current < pages.last" ng-click="loadPage((1 * pages.current) + 1)"  href="#">{{(1 * pages.current) + 1}}  </a> 
+		<a ng-show="pages.current < pages.last - 1" ng-click="loadPage((1 * pages.current) + 2)"  href="#">{{(1 * pages.current) + 2}}  </a> 
+		<a ng-show="pages.next" ng-click="loadPage(pages.next)" class="next paging-font"  href="#" title="다음">&gt;  </a> 
+		<a ng-show="pages.last" ng-click="loadPage(pages.last)" class="last paging-font"  href="#" title="끝">&gt;&gt;  </a>
+	</div>
+	<div class="col-xs-2" align="right">
+		<select ng-model="perPage" ng-options="num for num in pages.paginationPageSizes" ng-controller="chs.paging.table.ctrl" ng-change="pagingChanged(perPage)" style="width:70px">
+			<option value="" ng-if="false"></option>
+		</select>
+	</div>
+</div>

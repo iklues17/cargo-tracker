@@ -1,0 +1,49 @@
+
+<div class="modal-content">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" ng-click="close()" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		</button>
+		<h4 class="modal-title" translate="errors.title"></h4>
+	</div>
+	<div class="modal-body">
+		<div class="callout callout-danger">
+			<h4>Oops! Something went wrong.</h4>
+			<p>There is a problem that we need to fix. Please contact your system administrator.</p>
+		</div>
+		<table class="table table-striped">
+			<tr>
+				<td style="width: 100px">tId</td>
+				<td>{{tId}}</td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td>{{status}}</td>
+			</tr>
+			<tr>
+				<td>Code</td>
+				<td>{{code}}</td>
+			</tr>
+			<tr>
+				<td>Message</td>
+				<td>{{message}}</td>
+			</tr>
+			<tr ng-show="developerMessage">
+				<td>Detail Message</td>
+				<td style="word-wrap: break-word; min-width: 10px; max-width: 100px;">
+					<button class="btn-xs btn-default" ng-click="isCollapsed = !isCollapsed">Show Detail</button>
+					<div collapse="isCollapsed"><p>{{developerMessage}}</p></div>
+				</td>
+			</tr>
+			<tr ng-show="moreInfo">
+				<td>More Info</td>
+				<td>{{moreInfo}}</td>
+			</tr>
+		</table>
+
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" data-dismiss="modal" ng-click="close()">Close</button>
+	</div>
+</div>
+

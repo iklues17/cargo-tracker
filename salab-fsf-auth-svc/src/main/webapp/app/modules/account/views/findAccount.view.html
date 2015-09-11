@@ -1,0 +1,59 @@
+<div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h1>Find Account</h1>
+			<tabset>		
+				<tab heading="Username">
+					<div style="padding: 5px;">
+			            <div class="alert alert-success" ng-show="findUsernameResponse.status == 200">
+			                <strong>Username is '{{findUsernameResponse.data.login}}'.</strong>
+			            </div>
+			
+			            <div class="alert alert-danger" ng-show="findUsernameResponse.status >= 400">
+			                <strong>Bad Request</strong>
+			            </div>					
+						<div>
+				            <form ng-show="!success" name="findUsernameForm" role="form" novalidate ng-submit="findUsername(email)" show-validation>
+				
+				                <div class="form-group">
+				                    <label>Email</label>
+				                    <input type="text" class="form-control" name="email" placeholder="Your Email"
+				                           ng-model="email" ng-minlength=1 required>
+				                </div>
+				                <button type="submit" ng-disabled="findUsernameForm.$invalid" class="btn btn-primary">Find</button>
+				            </form>
+				        </div>
+					</div>
+				</tab>
+				<tab heading="Password">
+					<div style="padding: 5px;">				
+			            <div class="alert alert-success" ng-show="findPasswordResponse.status == 200">
+			                <strong>Password was regenerated as '{{findPasswordResponse.data.password}}'</strong>
+			            </div>
+			
+			            <div class="alert alert-danger" ng-show="findPasswordResponse.status >= 400">
+			                <strong>Bad Request</strong>
+			            </div>						
+						<div>
+				            <form ng-show="!success" name="findPasswordForm" role="form" novalidate ng-submit="findPassword(login, email)" show-validation>
+				                <div class="form-group">
+				                    <label>Login</label>
+				                    <input type="text" class="form-control" name="login" placeholder="Your Login"
+				                           ng-model="login" ng-minlength=1 required>
+				                </div>
+				                <div class="form-group">
+				                    <label>Email</label>
+				                    <input type="text" class="form-control" name="email" placeholder="Your Email"
+				                           ng-model="email" ng-minlength=1 required>
+				                </div>
+				                <button type="submit" ng-disabled="findPasswordForm.$invalid" class="btn btn-primary">Find</button>
+				            </form>
+			            </div>
+		            </div>
+				</tab>				
+			</tabset>
+
+
+        </div>
+    </div>
+</div>

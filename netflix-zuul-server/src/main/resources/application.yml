@@ -1,0 +1,36 @@
+server:
+  port: 9999
+  
+auth_server:
+  base_url: &auth_url http://localhost:8070 
+  get_token_url: /oauth/token?grant_type={grantType}
+  check_token_url: /oauth/check_token?token={access_token}
+  
+zuul:
+  ignored-services: "*"
+  routes:
+    OAuth2Service:
+      path: /auth/**
+      service-id: AuthServer
+      url: *auth_url
+      strip-prefix: true
+#    BookingService:
+#      path: /booking/**
+#      service-id: Cargobooking
+#      strip-prefix: true
+#    CargoTrackerService:
+#      path: /tracker/**
+#      service-id: Cargotracker
+#      strip-prefix: true
+#    PathfinderService: 
+#      path: /pathfinder/**
+#      service-id: Pathfinder
+#      strip-prefix: true
+    CargoUserService: 
+      path: /user/**
+      service-id: Cargouser
+      strip-prefix: true
+
+health:
+  hystrix:
+    enabled: true 

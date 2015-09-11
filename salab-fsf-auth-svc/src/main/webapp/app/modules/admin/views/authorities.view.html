@@ -1,0 +1,171 @@
+<div>
+
+	<!-- Content Header (Page header) -->
+	<section class="content-header">
+		<h1 translate="sampleAdminWebApp.authorities.home.title">
+			Authorities <small>Authorities list</small>
+		</h1>
+		<ol class="breadcrumb">
+			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+			<li><a href="#">Administrator</a></li>
+			<li class="active">Authorities</li>
+		</ol>
+	</section>
+
+	<!-- Main content -->
+	<section class="content">
+		<div class="row" ng-if="isInRole('ROLE_AUTH')">
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<div class="box col-xs-12 col-sm-12 col-md-12">
+					<div class="box-header">
+						<h3 class="box-title">User Accounts</h3>
+						<br><br>
+						Only for authorization server administrator.
+					</div>
+					<div class="box-body">
+						<!-- ui-grid -->
+						<div id="usersGrid" class="grid" ui-grid="usersGridOptions" ui-grid-pagination ui-grid-auto-resize ui-grid-selection ui-grid-edit ui-grid-row-edit ui-grid-cellNav></div>
+						<!-- ui-grid -->
+						<div>
+							<button type="button" id="reset2" class="btn btn-warning btn-xs"
+								ng-click="reset2()">Reset</button>	
+							<button type="button" id="addData2" class="btn btn-success btn-xs"
+								ng-click="addRow2()">New</button>
+							<button type="button" id="saveRows2" class="btn btn-primary btn-xs"
+								ng-click="saveRows2()">Save</button>
+							<button type="button" id="delete2" class="btn btn-danger btn-xs"
+								ng-click="deleteRows2()">Delete</button>			
+						</div>
+					</div>
+					<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+			</div>
+			<!-- /.col -->					
+		</div>
+		<!-- /.row -->
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6">
+				<div class="box col-xs-12 col-sm-12 col-md-12">
+					<div class="box-header">
+						<h3 class="box-title">My Grantable Authorities</h3>
+						<br><br>
+						Manage sub authorities under your authorities as followed instructions.
+						<br><br>
+						You can make sub roles of each role you have. and role name format must be
+						<br><br>
+						<h4>'<i>role name you have + underscore + capital letters</i>'</h4>
+						<br>
+						If your role name is '<i>ROLE_YOU_HAVE</i>',&nbsp; you can make the sub roles as follows.
+						<br><br>
+						<i>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'ROLE_YOU_HAVE_SUB'<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'ROLE_YOU_HAVE_SUB_ROLE'<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'ROLE_YOU_HAVE_SUB_ROLE_NAME'<br>
+						</i>
+						<br>														
+					</div>
+					<div class="box-body">
+						<div class="alert alert-success" style="margin-bottom: 5px">
+							Roles you have:<br><br>
+			            	<div ng-repeat="(k, v) in myAuthorities">
+			            		<i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'{{v}}'</i>
+			            	</div>
+						</div>	
+						<div class="col-xs-12 col-sm-12 col-md-12" style="padding-left: 0; padding-right: 0">
+							<!-- ui-grid -->
+							<div id="authoritiesGrid" class="grid" ui-grid="authoritiesGridOptions" ui-grid-auto-resize ui-grid-selection ui-grid-edit ui-grid-row-edit ui-grid-cellNav></div>
+							<!-- ui-grid -->							
+						</div>							
+						<div>
+							<button type="button" id="reset" class="btn btn-warning btn-xs"
+								ng-click="reset()">Reset</button>				
+							<button type="button" id="addData" class="btn btn-success btn-xs"
+								ng-click="addRow()">new</button>
+							<button type="button" id="saveRows" class="btn btn-primary btn-xs"
+								ng-click="saveRows()">save</button>
+							<button type="button" id="delete" class="btn btn-danger btn-xs"
+								ng-click="deleteRows()">delete</button>									
+						</div>										
+					</div>
+					<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+			</div>
+			<!-- /.col -->				
+		</div>
+		<!-- /.row -->				
+		
+		
+		<div class="row">		
+			<div class="col-xs-12 col-sm-12 col-md-8">
+				<div class="box col-xs-12 col-sm-12 col-md-12">
+					<div class="box-header">
+						<h3 class="box-title">User Authorites</h3>
+						<br><br>
+						Select an user, check authorities to grant selected user, and save.
+					</div>						
+					<div class="box-body">
+						<div class="col-xs-6 col-sm-6 col-md-6" style="padding-left: 0; padding-right: 0">
+							<!-- ui-grid -->
+							<div id="usersGrid2" class="grid" ui-grid="usersGridOptions2" ui-grid-pagination ui-grid-auto-resize ui-grid-selection></div>
+							<!-- ui-grid -->
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6" style="padding-left: 0; padding-right: 0">
+							<!-- ui-grid -->
+							<div id="authoritiesGrid2" class="grid" ui-grid="authoritiesGridOptions2" ui-grid-auto-resize ui-grid-selection ui-grid-edit ui-grid-row-edit ui-grid-cellNav></div>		
+							<!-- ui-grid -->
+						</div>
+						<div>
+							<button type="button" id="reset3" class="btn btn-warning btn-xs"
+								ng-click="reset3()">Reset</button>	
+							<button type="button" id="saveRows3" class="btn btn-primary btn-xs"
+								ng-click="saveRows3()">save</button>
+						</div>	
+					</div>
+					<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+			</div>
+			<!-- /.col -->			
+		</div>
+		<!-- /.row -->	
+		
+		<div class="row">		
+			<div class="col-xs-12 col-sm-12 col-md-8">
+				<div class="box col-xs-12 col-sm-12 col-md-12">
+					<div class="box-header">
+						<h3 class="box-title">Client Grant Default User Authorites</h3>
+						<br><br>
+						Select a client, check authorities which to set to selected client as client grant default authorities and save.
+					</div>						
+					<div class="box-body">
+						<div class="col-xs-6 col-sm-6 col-md-6" style="padding-left: 0; padding-right: 0">
+							<!-- ui-grid -->
+							<div id="clientsGrid11" class="grid" ui-grid="clientsGridOptions11" ui-grid-auto-resize ui-grid-selection></div>
+							<!-- ui-grid -->
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6" style="padding-left: 0; padding-right: 0">
+							<!-- ui-grid -->
+							<div id="authoritiesGrid12" class="grid" ui-grid="authoritiesGridOptions12" ui-grid-auto-resize ui-grid-selection ui-grid-edit ui-grid-row-edit ui-grid-cellNav></div>		
+							<!-- ui-grid -->
+						</div>
+						<div>
+							<button type="button" id="reset10" class="btn btn-warning btn-xs"
+								ng-click="reset10()">Reset</button>	
+							<button type="button" id="saveRows10" class="btn btn-primary btn-xs"
+								ng-click="saveRows10()">save</button>
+						</div>	
+					</div>
+					<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+			</div>
+			<!-- /.col -->			
+		</div>
+		<!-- /.row -->			
+		
+			
+	</section>
+	<!-- /.content -->
+</div>

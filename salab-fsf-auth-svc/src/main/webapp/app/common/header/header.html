@@ -1,0 +1,87 @@
+<style>
+.animateAlert-hide-setup, .animateAlert-show-setup {
+	-webkit-transition: all linear 0.9s;
+	-moz-transition: all linear 0.9s;
+	-ms-transition: all linear 0.9s;
+	-o-transition: all linear 0.9s;
+	transition: all linear 0.9s;
+}
+
+.animateAlert-show-setup {
+	opacity: 0;
+	height: 0;
+}
+
+.animateAlert-show-setup.animateAlert-show-start {
+	opacity: 1;
+	height: 100px;
+}
+
+.animateAlert-hide-setup {
+	opacity: 1;
+	height: 0;
+}
+
+.animateAlert-hide-setup.animateAlert-hide-start {
+	opacity: 0;
+	height: 100px;
+}
+</style>
+<!-- Alert -->
+<div style="position: fixed; bottom: 0; right: 0;">
+	<div ng-repeat="alert in alerts"
+		class="alert alert-{{alert.type}} alert-dismissable"
+		ng-show="alert.show" ng-animate="'animateAlert'">
+		<button type="button" class="close" data-dismiss="alert"
+			aria-hidden="true" ng-click="closeAlert($index)">&times;</button>
+		<i class="icon fa fa-ban"></i>&nbsp;<span>{{alert.msg}}</span>
+	</div>
+</div>
+
+<!-- Logo -->
+<a href="#/home" class="logo"><b>FSF AUTH</b></a>
+
+<!-- Header Navbar -->
+<nav class="navbar navbar-static-top" role="navigation">
+	<!-- Sidebar toggle button-->
+	<a href="#" class="sidebar-toggle" data-toggle="offcanvas"
+		role="button"> <span class="sr-only">Toggle navigation</span>
+	</a>
+<!-- 	
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" id="navbar-search-input" placeholder="Search">
+        </div>
+      </form>	
+	 -->
+	<div class="navbar-custom-menu" ng-switch="isAuthenticated()">
+		<ul class="nav navbar-nav" ng-switch-when="false">
+			<li class="notifications-menu"><a ui-sref="login">Login</a></li>
+			<li class="notifications-menu"><a ui-sref="register">Register</a></li>
+			<li class="notifications-menu"><a ui-sref="activate">Activate</a></li>
+		</ul>
+		<ul class="nav navbar-nav" ng-switch-when="true">
+			<li class="notifications-menu"><a ui-sref="settings">Settings</a></li>
+			<li class="notifications-menu"><a ui-sref="password">Password</a></li>
+			<li class="notifications-menu"><a ui-sref="logout">Logout</a></li>
+			<li class="notifications-menu"><a ui-sref="home"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> {{account.login}}</a></li>
+		</ul>
+	</div>
+</nav>
+</header>

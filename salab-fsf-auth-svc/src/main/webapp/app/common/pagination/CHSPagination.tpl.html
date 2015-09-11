@@ -1,0 +1,20 @@
+<div id="paging">
+	<div class="col-xs-2">
+	</div>
+	<div class="col-xs-8" align="center">
+		<a ng-show="pages.first" ng-click="gridApi.pagination.seek(pages.first)" class="fist"  href="#" title="처음"></a> 
+		<a ng-show="pages.prev" ng-click="gridApi.pagination.seek(pages.prev)" class="prev"  href="#" title="이전"></a>
+		<a ng-show="pages.current > 2" ng-click="gridApi.pagination.seek((1 * pages.current) - 2)"  href="#">{{(1 * pages.current) - 2}}</a> 
+		<a ng-show="pages.current > 1" ng-click="gridApi.pagination.seek((1 * pages.current) - 1)"  href="#">{{(1 * pages.current) - 1}}</a> 
+		<a href="#" class="active">{{pages.current}}</a>
+		<a ng-show="pages.current < pages.last" ng-click="gridApi.pagination.seek((1 * pages.current) + 1)"  href="#">{{(1 * pages.current) + 1}}</a> 
+		<a ng-show="pages.current < pages.last - 1" ng-click="gridApi.pagination.seek((1 * pages.current) + 2)"  href="#">{{(1 * pages.current) + 2}}</a> 
+		<a ng-show="pages.next" ng-click="gridApi.pagination.seek(pages.next)" class="next active"  href="#" title="다음"></a> 
+		<a ng-show="pages.last" ng-click="gridApi.pagination.seek(pages.last)" class="last active"  href="#" title="끝"></a>
+	</div> 
+	<div class="col-xs-2" align="right">
+		<select ng-model="perPage" ng-options="num for num in pages.paginationPageSizes" ng-controller="chs.paging.ctrl" ng-change="pagingChanged(perPage)" style="width:70px">
+			<option value="" ng-if="false"></option>
+		</select>
+	</div>
+</div>

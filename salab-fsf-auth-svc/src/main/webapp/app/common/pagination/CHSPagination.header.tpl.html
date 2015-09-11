@@ -1,0 +1,12 @@
+<div class="row">
+		<div class="col-xs-7" align="left">{{pages.firstItem}} -
+			{{pages.lastItem}} of {{pages.totalPage}} items</div>
+		<div class="col-xs-5" align="right">
+			<select ng-model="perPage"
+				ng-options="num for num in pages.paginationPageSizes"
+				ng-controller="chs.paging.header.ctrl"
+				ng-change="pagingChanged(perPage)" style="width: 70px">
+				<option value="" ng-if="false"></option>
+			</select>
+		</div>
+</div>

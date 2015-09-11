@@ -1,0 +1,150 @@
+<!-- sidebar: style can be found in sidebar.less -->
+<section class="sidebar">
+
+	<!-- Sidebar user panel (optional) 
+  <div class="user-panel">
+    <div class="pull-left image">
+      <img src="assets/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+    </div>
+    <div class="pull-left info">
+      <p>Alexander Pierce</p>
+      <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+    </div>
+  </div>-->
+
+	<!-- search form (Optional) 
+	<form action="#" method="get" class="sidebar-form">
+		<div class="input-group">
+			<input type="text" name="q" class="form-control"
+				placeholder="Search..." /> <span class="input-group-btn">
+				<button type='submit' name='search' id='search-btn'
+					class="btn btn-flat">
+					<i class="fa fa-search"></i>
+				</button>
+			</span>
+		</div>
+	</form>
+	-->
+	<!-- /.search form -->
+
+
+	<!-- Sidebar Menu -->
+	<ul class="sidebar-menu">
+		<li class="header">MAIN NAVIGATION</li>
+		<!-- Optionally, you can add icons to the links -->
+		<li class="treeview"  ng-style="isInRole('ROLE_AUTH_USER')?{}:{'display':'none'}">
+			<a href="#">
+				<i class="fa fa-laptop"></i>
+				<span>Administrator</span>
+				<i class="fa fa-angle-left pull-right"></i>
+			</a>
+			<ul class="treeview-menu">
+				<li><a ui-sref="authorities"><i class="fa fa-angle-right"></i>Authorities</a></li>
+				<li><a ui-sref="clients"><i class="fa fa-angle-right"></i>Clients</a></li>
+				<li><a ui-sref="findAccount"><i class="fa fa-angle-right"></i>Find Account</a></li>
+			</ul>
+		</li>
+		<li class="treeview">
+			<a href="#">
+				<i class="fa fa-users"></i>
+				<span>Account</span>
+				<i class="fa fa-angle-left pull-right"></i>
+			</a>		
+			<ul class="treeview-menu">
+				<li><a ui-sref="login"><i class="fa fa-angle-right"></i>Login</a></li>
+				<li><a ui-sref="register"><i class="fa fa-angle-right"></i>Register</a></li>
+				<li><a ui-sref="activate"><i class="fa fa-angle-right"></i>Activate</a></li>
+			</ul>
+		</li>		
+
+<!--  
+		<li class="active"><a href="#"><span>Link</span></a></li>
+		<li class="treeview"><a href="#"><i class="fa fa-files-o"></i><span>Sample</span><i
+				class="fa fa-angle-left pull-right"></i> <small
+				class="label pull-right bg-green">new</small> </a>
+			<ul class="treeview-menu">
+				<li><a ui-sref="author"><i class="fa fa-circle-o"></i>
+						author</a></li>
+				<li><a ui-sref="book"><i class="fa fa-circle-o"></i> Book</a></li>
+				<li><a ui-sref="treeViewExam"><i class="fa fa-circle-o"></i>
+						TreeView</a></li>
+				<li ng-show="isInRole('ROLE_ADMIN')"><a ui-sref="author2"><i
+						class="fa fa-circle-o"></i> AdminMenu</a></li>
+				<li><a ui-sref="author3"><i class="fa fa-circle-o"></i>
+						AccessDenied</a></li>
+				<li><a ui-sref="push"><i class="fa fa-circle-o"></i> Push</a></li>
+			</ul></li>
+
+		<li class="treeview"><a href="#"><i class="fa fa-laptop"></i><span>UI
+					Elements</span><i class="fa fa-angle-left pull-right"></i> <small
+				class="label pull-right bg-red">3</small> </a>
+			<ul class="treeview-menu">
+				<li><a ui-sref="general"><i class="fa fa-circle-o"></i>
+						General</a></li>
+				<li><a ui-sref="icons"><i class="fa fa-circle-o"></i> Icons</a></li>
+				<li><a ui-sref="buttons"><i class="fa fa-circle-o"></i>
+						Buttons</a></li>
+				<li><a ui-sref="sliders"><i class="fa fa-circle-o"></i>
+						Sliders</a></li>
+				<li><a ui-sref="timeline"><i class="fa fa-circle-o"></i>
+						Timeline</a></li>
+				<li><a ui-sref="modals"><i class="fa fa-circle-o"></i>
+						Modals</a></li>
+				<li><a ui-sref="datepicker"><i class="fa fa-circle-o"></i>
+						Datepicker</a></li>
+			</ul></li>
+
+		<li class="treeview"><a href="#"><i class="fa fa-pie-chart"></i><span>Charts</span><i
+				class="fa fa-angle-left pull-right"></i> </a>
+			<ul class="treeview-menu">
+				<li><a ui-sref="nvd3"><i class="fa fa-circle-o"></i> nvd3</a></li>
+			</ul></li>
+
+		<li class="treeview"><a href="#"><i class="fa fa-folder"></i>
+				<span>Examples</span><i class="fa fa-angle-left pull-right"></i> </a>
+			<ul class="treeview-menu">
+				<li><a ui-sref="sampleinvoice"><i class="fa fa-circle-o"></i>
+						Invoice</a></li>
+				<li><a ui-sref="login"><i class="fa fa-circle-o"></i> Login</a></li>
+				<li><a ui-sref="registration"><i class="fa fa-circle-o"></i>
+						Sign Up</a></li>
+				<li><a ui-sref="404"><i class="fa fa-circle-o"></i> 404
+						Error</a></li>
+				<li><a ui-sref="500"><i class="fa fa-circle-o"></i> 500
+						Error</a></li>
+				<li><a ui-sref="blank"><i class="fa fa-circle-o"></i> Blank
+						Page</a></li>
+			</ul></li>
+
+		<li class="treeview"><a href="#"><i class="fa fa-share"></i>
+				<span>Multilevel</span><i class="fa fa-angle-left pull-right"></i> </a>
+			<ul class="treeview-menu">
+				<li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+				<li><a href="#"><i class="fa fa-circle-o"></i> Level One <i
+						class="fa fa-angle-left pull-right"></i></a>
+					<ul class="treeview-menu">
+						<li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+						<li><a href="#"><i class="fa fa-circle-o"></i> Level Two
+								<i class="fa fa-angle-left pull-right"></i></a>
+							<ul class="treeview-menu">
+								<li><a href="#"><i class="fa fa-circle-o"></i> Level
+										Three</a></li>
+								<li><a href="#"><i class="fa fa-circle-o"></i> Level
+										Three</a></li>
+							</ul></li>
+					</ul></li>
+				<li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+			</ul></li>
+
+		<li class="header">LABELS</li>
+		<li><a href="#"><i class="fa fa-circle-o text-danger"></i>
+				Important</a></li>
+		<li><a href="#"><i class="fa fa-circle-o text-warning"></i>
+				Warning</a></li>
+		<li><a href="#"><i class="fa fa-circle-o text-info"></i>
+				Information</a></li>
+-->
+	</ul>
+	<!-- /.sidebar-menu -->
+</section>
+<!-- /.sidebar -->

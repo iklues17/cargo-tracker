@@ -1,0 +1,26 @@
+<div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h1 translate="activate.title">Validation</h1>
+
+            <div class="alert alert-success" ng-show="success">
+                <strong>Your username has been validated.</strong>
+            </div>
+
+            <div class="alert alert-danger" ng-show="error">
+                <strong>Your username could not be validated.</strong> Please use the correct activation key.
+            </div>
+
+            <form ng-show="!success" name="form" role="form" novalidate ng-submit="activateAccount()" show-validation>
+
+                <div class="form-group">
+                    <label>Activation Key</label>
+                    <input type="text" class="form-control" name="activationKey" placeholder="Activation Key"
+                           ng-model="paramKey" ng-minlength=1 required>
+                </div>
+                <button type="submit" ng-disabled="form.$invalid" class="btn btn-primary">Activate</button>
+            </form>
+
+        </div>
+    </div>
+</div>

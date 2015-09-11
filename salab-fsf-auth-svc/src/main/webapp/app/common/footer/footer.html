@@ -1,0 +1,11 @@
+<div>
+	<select ng-controller="localeCtrl" ng-model="model.selectedLocale"
+		ng-options="lang.val as lang.translationKey | translate for lang in availableLocales"
+		ng-change="changeLocale(model.selectedLocale);changeLanguage(model.selectedLocale)"></select>
+	<div class="pull-right hidden-xs">
+		<strong>Copyright &copy; 2015 <a
+			href="http://www.sds.samsung.com/">SAMSUNG SDS</a>.
+		</strong> All rights reserved.		
+	</div>
+</div>
+

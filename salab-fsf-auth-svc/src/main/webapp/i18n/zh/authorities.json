@@ -1,0 +1,9 @@
+{
+    "sampleAdminWebApp": {
+        "authorities" : {
+            "home": {
+                "title": "Accounts & Authorities"
+            }
+        }
+    }
+}

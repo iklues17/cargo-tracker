@@ -1,0 +1,13 @@
+{
+  "login" : "admin",
+  "password" : null,  
+  "firstName" : null,  
+  "lastName" : "Administrator",
+  "email" : null,
+  "langKey" : "en",  
+  "roles" : 
+    [
+      "ROLE_ADMIN",
+      "ROLE_USER"
+    ]
+}

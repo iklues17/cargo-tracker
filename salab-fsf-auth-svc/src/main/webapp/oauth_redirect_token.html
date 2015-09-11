@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function QueryStringToJSON(str) {
+			var pairs = str.split('&');
+			var result = {};
+			pairs.forEach(function(pair) {
+				pair = pair.split('=');
+				var name = pair[0]
+				var value = pair[1]
+				if (name.length)
+					if (result[name] !== undefined) {
+						if (!result[name].push) {
+							result[name] = [ result[name] ];
+						}
+						result[name].push(value || '');
+					} else {
+						result[name] = value || '';
+					}
+			});
+			return (result);
+		}
+		
+		var successAndredirectUrl = "/fsf/auth";
+		
+		var tokenQueryString = location.hash.substring(1);
+		//console.log(tokenQueryString);
+		var token = QueryStringToJSON(tokenQueryString);
+		//console.log(token);
+        var expiredAt = new Date();
+        expiredAt.setSeconds(expiredAt.getSeconds() + token.expires_in);
+        token.expires_at = expiredAt.getTime();
+		localStorage.setItem('ls.token', JSON.stringify(token));
+		location.href = successAndredirectUrl;
+	</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+client_id;client_secret;scope;authorized_grant_types;authorities;access_token_validity;refresh_token_validity;autoapprove
+restTest;restTestSecret;ROLE;authorization_code,implicit,password,client_credentials,refresh_token;ROLE_TEST_CLIENT;1600;16000;all
+auth;authSecret;ROLE;authorization_code,implicit,password,client_credentials,refresh_token;ROLE_TEST_CLIENT;1600;16000;all
+	  

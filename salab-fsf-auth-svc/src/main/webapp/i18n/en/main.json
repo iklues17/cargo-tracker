@@ -1,0 +1,9 @@
+{
+    "main": {
+        "title": "FSF AUTH SERVER MAIN",
+        "subtitle": "LCA, MOC, TA Authentication/Authorization Integration.",
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        }
+    }
+}

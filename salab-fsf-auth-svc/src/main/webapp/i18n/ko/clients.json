@@ -1,0 +1,9 @@
+{
+    "sampleAdminWebApp": {
+        "clients" : {
+            "home": {
+                "title": "Clients"
+            }
+        }
+    }
+}

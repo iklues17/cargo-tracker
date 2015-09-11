@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+
+    <changeSet id="0" author="fsfauth" dbms="postgresql,oracle">
+        <createSequence sequenceName="hibernate_sequence" startValue="1000" incrementBy="1"/>
+    </changeSet>
+
+    <changeSet id="1" author="fsfauth">
+        <createTable tableName="FSF_USER">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="login" type="varchar(50)">
+                <constraints unique="true" nullable="false"/>
+            </column>
+            <column name="PASSWORD" type="varchar(60)"/>
+            <column name="first_name" type="varchar(50)"/>
+            <column name="last_name" type="varchar(50)"/>
+            <column name="email" type="varchar(100)">
+                <constraints unique="true"/>
+            </column>
+            <column name="activated" type="boolean" valueBoolean="false">
+                <constraints nullable="false" />
+            </column>
+            <column name="lang_key" type="varchar(5)"/>
+            <column name="activation_key" type="varchar(20)"/>
+            <column name="created_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp" defaultValueDate="${now}">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="varchar(50)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <column name="authority_base" type="varchar(50)"/>
+            <column name="mobile_phone_number" type="varchar(100)"/>
+            <column name="login_failure_count" type="INT"/>
+            <column name="password_expired_date" type="timestamp">
+                <constraints nullable="true"/>
+            </column>
+            <column name="password_updated_date" type="timestamp">
+                <constraints nullable="true"/>
+            </column>            
+        </createTable>
+        
+        <createIndex indexName="idx_user_login"
+            tableName="FSF_USER"
+            unique="true">
+            <column name="login" type="varchar(50)"/>
+        </createIndex>
+
+        <createIndex indexName="idx_user_email"
+            tableName="FSF_USER"
+            unique="true">
+            <column name="email" type="varchar(100)"/>
+        </createIndex>
+        
+        <createTable tableName="FSF_AUTHORITY">
+            <column name="name" type="varchar(50)">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="FSF_USER_AUTHORITY">
+            <column name="user_id" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="authority_name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+                                 
+        <addPrimaryKey columnNames="user_id, authority_name" tableName="FSF_USER_AUTHORITY"/>
+
+        <addForeignKeyConstraint baseColumnNames="authority_name"
+                                 baseTableName="FSF_USER_AUTHORITY"
+                                 constraintName="fk_authority_name"
+                                 referencedColumnNames="name"
+                                 referencedTableName="FSF_AUTHORITY"/>
+
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="FSF_USER_AUTHORITY"
+                                 constraintName="fk_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="FSF_USER"/>
+                                 
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/users.csv"
+                  separator=";"
+                  tableName="FSF_USER">
+            <column name="activated" type="boolean"/>
+            <column name="created_date" type="timestamp"/>
+        </loadData>
+        <dropDefaultValue tableName="FSF_USER" columnName="created_date" columnDataType="datetime"/>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/authorities.csv"
+                  separator=";"
+                  tableName="FSF_AUTHORITY"/>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/users_authorities.csv"
+                  separator=";"
+                  tableName="FSF_USER_AUTHORITY"/>
+                  
+    </changeSet>
+    
+    <!-- Manage the OAuth authentication -->
+    <changeSet id="2" author="fsfauth">
+        <createTable tableName="oauth_client_details">
+            <column name="client_id" type="varchar(255)">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="resource_ids" type="varchar(255)"/>
+            <column name="client_secret" type="varchar(255)"/>
+            <column name="scope" type="varchar(255)"/>
+            <column name="authorized_grant_types" type="varchar(255)"/>
+            <column name="web_server_redirect_uri" type="varchar(255)"/>
+            <column name="authorities" type="varchar(255)"/>
+            <column name="access_token_validity" type="INT"/>
+            <column name="refresh_token_validity" type="INT"/>
+            <column name="additional_information" type="VARCHAR(4096)"/>
+            <column name="autoapprove" type="VARCHAR(4096)"/>
+        </createTable>
+
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/oauth_client_details.csv"
+                  separator=";"
+                  tableName="oauth_client_details"/>
+
+        <createTable tableName="oauth_client_token">
+            <column name="token_id" type="varchar(255)"/>
+            <column name="token" type="BLOB"/>
+            <column name="authentication_id" type="varchar(255)"/>
+            <column name="user_name" type="varchar(255)"/>
+            <column name="client_id" type="varchar(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="user_name"
+            baseTableName="oauth_client_token"
+            constraintName="fk_oauth_client_tokn_user_name"
+            referencedColumnNames="login"
+            referencedTableName="FSF_USER"/>
+
+        <createTable tableName="oauth_access_token">
+            <column name="token_id" type="varchar(255)"/>
+            <column name="token" type="BLOB"/>
+            <column name="authentication_id" type="varchar(255)">
+                 <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="user_name" type="varchar(255)"/>
+            <column name="client_id" type="varchar(255)"/>
+            <column name="authentication" type="BLOB"/>
+            <column name="refresh_token" type="varchar(255)"/>
+        </createTable>
+
+        <addForeignKeyConstraint baseColumnNames="user_name"
+            baseTableName="oauth_access_token"
+            constraintName="fk_oauth_access_tokn_user_name"
+            referencedColumnNames="login"
+            referencedTableName="FSF_USER"/>
+
+        <createTable tableName="oauth_refresh_token">
+            <column name="token_id" type="varchar(255)"/>
+            <column name="token" type="BLOB"/>
+            <column name="authentication" type="BLOB"/>
+        </createTable>
+
+        <createTable tableName="oauth_code">
+            <column name="code" type="varchar(255)"/>
+        </createTable>
+
+        <createTable tableName="oauth_approvals">
+            <column name="userId" type="varchar(255)"/>
+            <column name="clientId" type="varchar(255)"/>
+            <column name="scope" type="varchar(255)"/>
+            <column name="status" type="varchar(255)"/>
+            <column name="expiresAt" type="timestamp"/>
+            <column name="lastModifiedAt" type="timestamp"/>
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="3" author="fsfauth">
+		<createTable tableName="FSF_CLIENT_GRANT_DEFAULT_USER_AUTHORITY">
+            <column name="client_id" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="authority_id" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        
+        <addPrimaryKey columnNames="client_id, authority_id" tableName="FSF_CLIENT_GRANT_DEFAULT_USER_AUTHORITY"/>
+        <addForeignKeyConstraint baseColumnNames="authority_id"
+                                 baseTableName="FSF_CLIENT_GRANT_DEFAULT_USER_AUTHORITY"
+                                 constraintName="fk_authority_id"
+                                 referencedColumnNames="name"
+                                 referencedTableName="FSF_AUTHORITY"/>
+
+        <addForeignKeyConstraint baseColumnNames="client_id"
+                                 baseTableName="FSF_CLIENT_GRANT_DEFAULT_USER_AUTHORITY"
+                                 constraintName="fk_client_id"
+                                 referencedColumnNames="client_id"
+                                 referencedTableName="oauth_client_details"/>
+    </changeSet>
+    <changeSet id="4" author="fsfauth">
+		<createTable tableName="FSF_USER_EVENT_HISTORY">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="event_time" type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="event_type" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="username" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>                        
+        </createTable>
+    </changeSet>    
+</databaseChangeLog>

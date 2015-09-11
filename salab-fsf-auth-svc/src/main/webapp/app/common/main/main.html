@@ -1,0 +1,45 @@
+<div>
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 translate="main.title">Welcome</h1>
+            <p class="lead" translate="main.subtitle">This is your homepage</p>
+
+            <div ng-switch="isAuthenticated()">
+            	<div ng-switch-when="true">
+	            	<h4>Account Brief</h4>
+	                <div class="alert alert-success">
+	            		User:<br>
+	            		&nbsp; &nbsp; &nbsp; &nbsp;{{account.login}}<br>
+	            		Role:<br>
+	            		&nbsp; &nbsp; &nbsp; &nbsp;{{account.roles}}<br>
+	            		Info:<br>
+	            		&nbsp; &nbsp; &nbsp; &nbsp;{{account.infos}}<br>	            		
+	                </div>
+                </div>
+            </div>
+            
+			<div ng-switch="isAuthenticated()">
+				<div  ng-switch-when="true">
+					<h4>LocalStarage Token Info.</h4>
+					<div class="alert alert-success">
+		            	<div ng-repeat="(k, v) in token">
+		            		{{k}}:<br>
+		            		&nbsp; &nbsp; &nbsp; &nbsp;{{v}}
+		            	</div>
+		            </div>
+		            <h4>Response From Check Token</h4>
+					<div class="alert alert-success">
+		            	<div ng-repeat="(k, v) in tokenDetail">
+		            		{{k}}:<br>
+		            		&nbsp; &nbsp; &nbsp; &nbsp;{{v}}
+		            	</div>
+		            </div>
+	            </div>
+			</div>    
+
+        </div>
+    </div>
+    </section>
+</div>
