@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=960">
+
+<title>REFRESH</title>
+<script>
+	function fn_keyValueSummit() {
+		if(document.getElementById("summitTarget").value==1) {
+			document.getElementById("summitForm").action = "http://localhost:8082/admin/bus/env"
+		} else if(document.getElementById("summitTarget").value==2) {
+			document.getElementById("summitForm").action = "http://localhost:8083/admin/bus/env"
+		}
+			
+		document.getElementById("summitForm").submit()
+	}
+	function fn_refreshKeyvalue() {
+		if(document.getElementById("refreshTarget").value==1) {
+			document.getElementById("refreshForm").action = "http://localhost:8082/admin/bus/refresh"
+		} else if(document.getElementById("refreshTarget").value==2) {
+			document.getElementById("refreshForm").action = "http://localhost:8083/admin/bus/refresh"
+		}
+		
+		document.getElementById("refreshForm").submit()
+	}
+	
+</script>
+</head>
+
+<body>
+
+	<!--<div>
+		<form id="summitForm" name="summitForm" action="" method="post">
+			<select id="summitTarget" name="target">
+				<option value="1" selected="selected">movie</option>
+				<option value="2">genre</option>
+			</select>
+			<input type="text" id="samplekey" name="samplekey" />
+			<input type="button" value="commit" onclick="javascript:fn_keyValueSummit()"/>
+		</form>
+	</div>-->
+	
+	<div>
+		<form id="refreshForm" name="refreshForm" action="" method="post">
+			<select id="refreshTarget" name="target">
+				<option value="1" selected="selected"> movie </option>
+				<option value="2"> genre </option>
+			</select>
+	  		<input type="button" value="refresh" onclick="javascript:fn_refreshKeyvalue()"/>
+		</form>
+	</div>
+
+</body>
+
+</html>
